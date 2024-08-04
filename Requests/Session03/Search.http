@@ -1,0 +1,14 @@
+# search
+GET {{baseUrlSearch}}/api/search 
+
+###
+# search with term
+GET {{baseUrlSearch}}/api/search?searchTerm=ford
+
+###
+# search with pagination
+GET {{baseUrlSearch}}/api/search?pageNumber=1&pageSize=1 
+
+###
+# search with filter
+GET {{baseUrlSearch}}/api/search?filterBy=finished 
