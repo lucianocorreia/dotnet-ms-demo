@@ -1,0 +1,33 @@
+### get all auctions
+GET {{baseUrl}}/api/auctions 
+
+### Get auction by id
+GET {{baseUrl}}/api/auctions/6a5011a1-fe1f-47df-9a32-b5346b289391
+
+### create auction
+# @name create_auction
+POST {{baseUrl}}/api/auctions 
+Content-Type: application/json
+
+{
+  "make": "Ford",
+  "model": "Escort",
+  "color": "White",
+  "year": "2021",
+  "mileage": "10000",
+  "imageUrl": "https://cdn.pixabay.com/photo/2018/02/04/15/45/car-3130111_960_720.jpg",
+  "reservePrice": 100,
+  "auctionEnd": "{{$datetime iso8601}}"
+}
+
+### update auction
+PUT {{baseUrl}}/api/auctions/f2aeb03e-e220-4806-ae54-c3d55802544f
+Content-Type: application/json
+
+{
+    "make": "Ford Updated 2"
+}
+
+### delete auction
+DELETE {{baseUrl}}/api/auctions/6a5011a1-fe1f-47df-9a32-b5346b289391
+
